@@ -1,20 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:gravity="center"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp">
 
-
-
-    <ImageView
+    <Button
+        android:id="@+id/rotateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/pasted_image"
-        android:scrollbarSize="@dimen/cardview_default_radius"
-        android:id="@+id/imagebtn"
-        />
+        android:text="Rotate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentTop="true"/>
 
-    
+    <Button
+        android:id="@+id/translateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Translate"
+        android:layout_below="@id/rotateButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"/>
 
+    <Button
+        android:id="@+id/resizeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resize"
+        android:layout_below="@id/translateButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"/>
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/targetImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/pasted_image" />
+</RelativeLayout>
